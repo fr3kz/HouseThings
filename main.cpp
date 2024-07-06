@@ -33,7 +33,15 @@ void Screen() {
         DrawText("Todo:",margin+10,margin*2 + 10,20,BLACK);
         if(isAnyTodos) DrawText("Brak zadan",margin+ 70,margin*2 + 40,20,BLACK);
 
+        //Lista zadan zaplanowane
+        DrawRectangle(margin, margin * 2+150, (width - 2 * margin), TodoContrainerHegiht, RED);
+        DrawText("Planned:", margin + 10, margin * 2 + 10, 20, BLACK);
+        if (isAnyTodos) DrawText("Brak zadan", margin + 70, margin * 2 + 40, 20, BLACK);
 
+		// Lista do pamietania
+        DrawRectangle(margin, margin * 2+300, (width - 2 * margin), TodoContrainerHegiht, RED);
+        DrawText("Important:", margin + 10, margin * 2 + 10, 20, BLACK);
+        if (isAnyTodos) DrawText("Brak zadan", margin + 70, margin * 2 + 40, 20, BLACK);
         //Lista kolejnych zadan z enuma
         EndDrawing();
     }
